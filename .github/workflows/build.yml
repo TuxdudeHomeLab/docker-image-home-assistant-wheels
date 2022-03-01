@@ -107,6 +107,7 @@ jobs:
           push: true
           tags: ${{ env.DOCKERHUB_REPO_NAME }}:${{ env.DOCKERHUB_PUBLISH_TAG }}
           build-args: ${{ steps.docker_build_args.outputs.build_args }}
+          allow: security.insecure
 
       - name: Build docker images for all platforms
         uses: docker/build-push-action@v2
@@ -123,3 +124,4 @@ jobs:
           push: false
           tags: ${{ env.DOCKERHUB_REPO_NAME }}:${{ env.DOCKERHUB_TEST_TAG }}
           build-args: ${{ steps.docker_build_args.outputs.build_args }}
+          allow: security.insecure
