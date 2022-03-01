@@ -1,7 +1,11 @@
 autoconf=2.69-14
 build-essential=12.9
 cargo=0.47.0-3+b1
+cmake=3.18.4-2+deb11u1
+libbluetooth-dev=5.55-3.1
+libcups2-dev=2.3.3op2-3+deb11u1
 libffi-dev=3.3-6
+libglib2.0-dev=2.66.8-1
 libjpeg-dev=1:2.0.6-4
 libopenjp2-7=2.4.0-3
 libssl-dev=1.1.1k-1+deb11u1
