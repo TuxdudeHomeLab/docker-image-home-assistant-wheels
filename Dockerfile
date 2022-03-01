@@ -24,7 +24,7 @@ RUN \
 
 WORKDIR /root/ha
 
-# hadolint ignore=DL4006,SC1091
+# hadolint ignore=DL4006,SC2035
 RUN \
     set -e -o pipefail \
     # Download the home assistant core and the full module dependency list. \
@@ -34,7 +34,17 @@ RUN \
     && echo "homeassistant==${HOME_ASSISTANT_VERSION:?}" > requirements_ha.txt \
     # Patch the requirements.txt to disable modules which require \
     # conflicting dependency versions. \
-    && (find /patches -iname *.diff -print0 | sort -z | xargs -0 -n 1 patch -p1 -i) \
+    && (find /patches -iname *.diff -print0 | sort -z | xargs -0 -n 1 patch -p1 -i)
+
+# hadolint ignore=DL3001,SC1091
+RUN --security=insecure \
+    set -e -o pipefail \
+    # Workaround for the rust/cargo build needed by cryptography due to a \
+    # qemu bug. See this issue for more context and this step acts merely \
+    # as a workaround. \
+    # https://github.com/rust-lang/cargo/issues/8719#issuecomment-932084513 \
+    && homelab install mount \
+    && mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo \
     # Set up the virtual environment for building the wheels. \
     && python3 -m venv . \
     && source bin/activate \
