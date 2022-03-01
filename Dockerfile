@@ -31,6 +31,7 @@ RUN \
     && curl --silent --location --remote-name https://raw.githubusercontent.com/home-assistant/core/${HOME_ASSISTANT_VERSION:?}/requirements_all.txt \
     && curl --silent --location --remote-name https://raw.githubusercontent.com/home-assistant/core/${HOME_ASSISTANT_VERSION:?}/requirements.txt \
     && curl --silent --location --remote-name --output-dir ./homeassistant https://raw.githubusercontent.com/home-assistant/core/${HOME_ASSISTANT_VERSION:?}/homeassistant/package_constraints.txt \
+    && echo "homeassistant==${HOME_ASSISTANT_VERSION:?}" > requirements_ha.txt \
     # Patch the requirements.txt to disable modules which require \
     # conflicting dependency versions. \
     && (find /patches -iname *.diff -print0 | sort -z | xargs -0 -n 1 patch -p1 -i) \
@@ -46,7 +47,8 @@ RUN \
         --progress-bar off \
         --wheel-dir=/wheels \
         --requirement requirements.txt \
-        --requirement requirements_all.txt
+        --requirement requirements_all.txt \
+        --requirement requirements_ha.txt
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
