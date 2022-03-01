@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.3
+# syntax=docker/dockerfile:experimental
 
 ARG BASE_IMAGE_NAME
 ARG BASE_IMAGE_TAG
