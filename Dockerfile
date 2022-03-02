@@ -53,7 +53,6 @@ RUN --security=insecure \
     # Build the wheels. \
     && MAKEFLAGS="-j$(nproc)" pip3 wheel \
         --no-cache-dir \
-        --no-clean \
         --progress-bar off \
         --wheel-dir=/wheels \
         --requirement requirements.txt \
