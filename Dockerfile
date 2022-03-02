@@ -48,8 +48,8 @@ RUN --security=insecure \
     # Set up the virtual environment for building the wheels. \
     && python3 -m venv . \
     && source bin/activate \
-    && pip3 install --no-cache-dir --upgrade pip==${PIP_VERSION:?} \
-    && pip3 install --no-cache-dir --upgrade wheel==${WHEEL_VERSION:?} \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade pip==${PIP_VERSION:?} \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?} \
     # Build the wheels. \
     && MAKEFLAGS="-j$(nproc)" pip3 wheel \
         --no-cache-dir \
