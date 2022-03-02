@@ -59,16 +59,16 @@ RUN --security=insecure \
     && mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo \
     # Activate the virtual environment for building the wheels. \
     && source bin/activate \
+    && (mv /pkg-cache/*.whl /wheels/ || true) \
     # Build the wheels. \
     && MAKEFLAGS="-j$(nproc)" pip3 wheel \
         --no-cache-dir \
         --progress-bar off \
         --no-index \
         --find-links /pkg-cache \
+        --find-links /wheels \
         --wheel-dir=/wheels \
-        --requirement requirements.txt \
-        --requirement requirements_all.txt \
-        --requirement requirements_ha.txt
+        /pkg-cache/*
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
