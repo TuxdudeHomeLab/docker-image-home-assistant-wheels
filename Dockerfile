@@ -16,7 +16,7 @@ COPY patches /patches
 RUN \
     set -e -o pipefail \
     # Install build dependencies. \
-    && homelab install util-linux \
+    && homelab install util-linux mount \
     # autoconf build-essential rustc cargo python3-dev \
     # Install dependencies. \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
@@ -55,7 +55,6 @@ RUN --security=insecure \
     # qemu bug. See this issue for more context and this step acts merely \
     # as a workaround. \
     # https://github.com/rust-lang/cargo/issues/8719#issuecomment-932084513 \
-    && homelab install mount \
     && mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo \
     # Activate the virtual environment for building the wheels. \
     && source bin/activate \
