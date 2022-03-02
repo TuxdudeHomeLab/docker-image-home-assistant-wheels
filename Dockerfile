@@ -20,11 +20,11 @@ RUN \
     # autoconf build-essential rustc cargo python3-dev \
     # Install dependencies. \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
-    && mkdir -p /root/ha /root/ha/homeassistant /wheels
+    && mkdir -p /root/ha /root/ha/homeassistant /pkg-cache /wheels
 
 WORKDIR /root/ha
 
-# hadolint ignore=DL4006,SC2035
+# hadolint ignore=DL4006,SC1091
 RUN \
     set -e -o pipefail \
     # Download the home assistant core and the full module dependency list. \
@@ -34,7 +34,19 @@ RUN \
     && echo "homeassistant==${HOME_ASSISTANT_VERSION:?}" > requirements_ha.txt \
     # Patch the requirements.txt to disable modules which require \
     # conflicting dependency versions. \
-    && (find /patches -iname *.diff -print0 | sort -z | xargs -0 -n 1 patch -p1 -i)
+    && (find /patches -iname *.diff -print0 | sort -z | xargs -0 -n 1 patch -p1 -i) \
+    # Set up the virtual environment for building the wheels. \
+    && python3 -m venv . \
+    && source bin/activate \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade pip==${PIP_VERSION:?} \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?} \
+    && pip3 download \
+        --no-cache-dir \
+        --progress-bar off \
+        --dest=/pkg-cache \
+        --requirement requirements.txt \
+        --requirement requirements_all.txt \
+        --requirement requirements_ha.txt
 
 # hadolint ignore=DL3001,SC1091
 RUN --security=insecure \
@@ -45,15 +57,14 @@ RUN --security=insecure \
     # https://github.com/rust-lang/cargo/issues/8719#issuecomment-932084513 \
     && homelab install mount \
     && mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo \
-    # Set up the virtual environment for building the wheels. \
-    && python3 -m venv . \
+    # Activate the virtual environment for building the wheels. \
     && source bin/activate \
-    && pip3 install --no-cache-dir --progress-bar off --upgrade pip==${PIP_VERSION:?} \
-    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?} \
     # Build the wheels. \
     && MAKEFLAGS="-j$(nproc)" pip3 wheel \
         --no-cache-dir \
         --progress-bar off \
+        --no-index \
+        --find-links /pkg-cache \
         --wheel-dir=/wheels \
         --requirement requirements.txt \
         --requirement requirements_all.txt \
