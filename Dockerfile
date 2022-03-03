@@ -20,7 +20,7 @@ RUN \
     # autoconf build-essential rustc cargo python3-dev \
     # Install dependencies. \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
-    && mkdir -p /root/ha /root/ha/homeassistant /pkg-cache /wheels
+    && mkdir -p /root/ha /root/ha/homeassistant /wheels
 
 WORKDIR /root/ha
 
@@ -39,14 +39,7 @@ RUN \
     && python3 -m venv . \
     && source bin/activate \
     && pip3 install --no-cache-dir --progress-bar off --upgrade pip==${PIP_VERSION:?} \
-    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?} \
-    && pip3 download \
-        --no-cache-dir \
-        --progress-bar off \
-        --dest=/pkg-cache \
-        --requirement requirements.txt \
-        --requirement requirements_all.txt \
-        --requirement requirements_ha.txt
+    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?}
 
 # hadolint ignore=DL3001,SC1091
 RUN --security=insecure \
@@ -58,16 +51,14 @@ RUN --security=insecure \
     && mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo \
     # Activate the virtual environment for building the wheels. \
     && source bin/activate \
-    && (mv /pkg-cache/*.whl /wheels/ || true) \
     # Build the wheels. \
     && MAKEFLAGS="-j$(nproc)" pip3 wheel \
         --no-cache-dir \
         --progress-bar off \
-        --no-index \
-        --find-links /pkg-cache \
-        --find-links /wheels \
         --wheel-dir=/wheels \
-        /pkg-cache/*
+        --requirement requirements.txt \
+        --requirement requirements_all.txt \
+        --requirement requirements_ha.txt
 
 FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG}
 
