@@ -56,7 +56,6 @@ RUN --security=insecure \
         --no-cache-dir \
         --progress-bar off \
         --wheel-dir=/wheels \
-        --requirement requirements.txt \
         --requirement requirements_all.txt \
         --requirement requirements_ha.txt
 
