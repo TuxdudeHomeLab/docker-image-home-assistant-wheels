@@ -1,8 +1,10 @@
-# syntax=docker/dockerfile:experimental
+# syntax=docker/dockerfile:1.3
 
 ARG BASE_IMAGE_NAME
 ARG BASE_IMAGE_TAG
-FROM ${BASE_IMAGE_NAME}:${BASE_IMAGE_TAG} AS builder
+ARG CRYPTOGRAPHY_WHEELS_IMAGE_NAME
+ARG CRYPTOGRAPHY_WHEELS_IMAGE_TAG
+FROM ${CRYPTOGRAPHY_WHEELS_IMAGE_NAME}:${CRYPTOGRAPHY_WHEELS_IMAGE_TAG} AS builder
 
 SHELL ["/bin/bash", "-c"]
 
@@ -37,23 +39,13 @@ RUN \
     && python3 -m venv . \
     && source bin/activate \
     && pip3 install --no-cache-dir --progress-bar off --upgrade pip==${PIP_VERSION:?} \
-    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?}
-
-# hadolint ignore=DL3001,SC1091
-RUN --security=insecure \
-    set -e -o pipefail \
-    # Workaround for the rust/cargo build needed by cryptography due to a \
-    # qemu bug. See this issue for more context and this step acts merely \
-    # as a workaround. \
-    # https://github.com/rust-lang/cargo/issues/8719#issuecomment-932084513 \
-    && mkdir -p /root/.cargo && chmod 777 /root/.cargo && mount -t tmpfs none /root/.cargo \
-    # Activate the virtual environment for building the wheels. \
-    && source bin/activate \
+    && pip3 install --no-cache-dir --progress-bar off --upgrade wheel==${WHEEL_VERSION:?} \
     # Build the wheels. \
     && MAKEFLAGS="-j$(nproc)" pip3 wheel \
         --no-cache-dir \
         --progress-bar off \
         --wheel-dir=/wheels \
+        --find-links=/wheels \
         --requirement requirements.txt \
         --constraint constraints.txt
 
