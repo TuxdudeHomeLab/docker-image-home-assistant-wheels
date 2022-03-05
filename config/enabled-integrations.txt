@@ -1,7 +1,6 @@
-auth.mfa_modules.totp
-auth.mfa_modules.notify
-scripts.check_config
 aprs
+auth.mfa_modules.notify
+auth.mfa_modules.totp
 braviatv
 brother
 camera
@@ -46,6 +45,7 @@ recorder
 rest
 roku
 scrape
+scripts.check_config
 season
 serial
 slack
