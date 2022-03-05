@@ -63,8 +63,8 @@ SHELL ["/bin/bash", "-c"]
 
 RUN --mount=type=bind,target=/builder,from=builder,source=/wheels \
     set -e -o pipefail \
-    && mkdir -p /ha-wheels \
-    && cp -rf /builder/* /ha-wheels/
+    && mkdir -p /wheels \
+    && cp -rf /builder/* /wheels/
 
 ENV USER=${USER_NAME}
 ENV PATH="/opt/bin:${PATH}"
