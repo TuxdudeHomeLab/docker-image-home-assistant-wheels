@@ -21,7 +21,7 @@ RUN \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
     && mkdir -p /config /root/ha /root/ha/homeassistant /wheels
 
-COPY config/enabled-components.txt /config/
+COPY config/enabled-integrations.txt /config/
 
 WORKDIR /root/ha
 
@@ -32,7 +32,7 @@ RUN \
     && homelab install-tuxdude-go-package TuxdudeHomeLab/hasspkgutil ${HASS_PKG_UTIL_VERSION:?} \
     # Generate the requirements and constraint list for Home Assistant \
     # Core and also all the integrations we want to enable. \
-    && hasspkgutil -ha-version ${HOME_ASSISTANT_VERSION:?} -output-requirements requirements.txt -output-constraints constraints.txt -enabled-components /config/enabled-components.txt \
+    && hasspkgutil -ha-version ${HOME_ASSISTANT_VERSION:?} -output-requirements requirements.txt -output-constraints constraints.txt -enabled-integrations /config/enabled-integrations.txt \
     # Set up the virtual environment for building the wheels. \
     && python3 -m venv . \
     && source bin/activate \

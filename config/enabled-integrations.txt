@@ -1,3 +1,6 @@
+auth.mfa_modules.totp
+auth.mfa_modules.notify
+scripts.check_config
 aprs
 braviatv
 brother
