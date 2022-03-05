@@ -19,11 +19,11 @@ RUN \
     # autoconf build-essential rustc cargo python3-dev \
     # Install dependencies. \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
-    && mkdir -p /config /root/ha /wheels
+    && mkdir -p /config /root/hass /wheels
 
 COPY config/enabled-integrations.txt /config/
 
-WORKDIR /root/ha
+WORKDIR /root/hass
 
 # hadolint ignore=DL4006,SC1091
 RUN \
