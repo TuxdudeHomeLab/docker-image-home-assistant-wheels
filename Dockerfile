@@ -19,7 +19,7 @@ RUN \
     # autoconf build-essential rustc cargo python3-dev \
     # Install dependencies. \
     && homelab install ${PACKAGES_TO_INSTALL:?} \
-    && mkdir -p /config /root/ha /root/ha/homeassistant /wheels
+    && mkdir -p /config /root/ha /wheels
 
 COPY config/enabled-integrations.txt /config/
 
