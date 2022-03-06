@@ -1,8 +1,5 @@
 IMAGE_NAME := homelab-home-assistant-wheels
 
-ENABLE_DOCKER_BUILDKIT := y
-DOCKER_BUILDKIT_PROGRESS_PLAIN ?= n
-
 include ./.bootstrap/makesystem.mk
 
 ifeq ($(MAKESYSTEM_FOUND),1)
