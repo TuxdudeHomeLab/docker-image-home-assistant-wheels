@@ -1,6 +1,7 @@
 aprs
 auth.mfa_modules.notify
 auth.mfa_modules.totp
+backup
 braviatv
 brother
 camera
@@ -15,6 +16,7 @@ dnsip
 ffmpeg
 folder_watcher
 frontend
+generic
 geo_json_events
 google
 google_cloud

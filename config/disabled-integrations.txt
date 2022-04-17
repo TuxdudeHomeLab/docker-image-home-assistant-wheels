@@ -14,6 +14,7 @@ airnow
 airthings
 airtouch4
 airvisual
+airzone
 aladdin_connect
 alarmdecoder
 almond
@@ -59,24 +60,18 @@ azure_event_hub
 azure_service_bus
 baidu
 balboa
-bbb_gpio
 bbox
 beewi_smartclim
-bh1750
 bitcoin
 bizkaibus
 blackbird
 blebox
 blink
 blinksticklight
-blinkt
 blockchain
 bluesound
 bluetooth_le_tracker
 bluetooth_tracker
-bme280
-bme680
-bmp280
 bmw_connected_drive
 bond
 bosch_shc
@@ -123,7 +118,6 @@ deutsche_bahn
 devolo_home_control
 devolo_home_network
 dexcom
-dht
 digitalloggers
 digital_ocean
 directv
@@ -171,7 +165,6 @@ enocean
 enphase_envoy
 entur_public_transport
 environment_canada
-envirophat
 envisalink
 ephember
 epson
@@ -267,7 +260,6 @@ homeworks
 honeywell
 horizon
 hp_ilo
-htu21d
 huawei_lte
 hue
 huisbaasje
@@ -303,6 +295,7 @@ jewish_calendar
 joaoapps_join
 juicenet
 kaiterra
+kaleidescape
 keba
 keenetic_ndms2
 kef
@@ -350,7 +343,6 @@ mastodon
 matrix
 maxcube
 mazda
-mcp23017
 mediaroom
 melcloud
 melissa
@@ -361,7 +353,6 @@ meteoclimatic
 meteo_france
 metoffice
 mfi
-mhz19
 microsoft
 miflora
 mikrotik
@@ -447,24 +438,20 @@ opentherm_gw
 openuv
 opnsense
 opple
-orangepi_gpio
 oru
 orvibo
 osramlightify
 overkiz
 ovo_energy
 owntracks
-ozw
 p1_monitor
 panasonic_bluray
 panasonic_viera
 pandora
-pcal9535a
+peco
 pencom
 philips_js
-pi4ioe5v9xxxx
 picnic
-piglow
 pilight
 pjlink
 plaato
@@ -497,7 +484,6 @@ rainbird
 raincloud
 rainforest_eagle
 rainmachine
-raspihats
 raspyrfm
 rdw
 recollect_waste
@@ -522,10 +508,7 @@ roon
 route53
 rova
 rpi_gpio
-rpi_gpio_pwm
-rpi_pfio
 rpi_power
-rpi_rf
 rtsp_to_webrtc
 ruckus_unleashed
 russound_rio
@@ -539,7 +522,6 @@ screenlogic
 scsgate
 sendgrid
 sense
-sensehat
 senseme
 sensibo
 sentry
@@ -550,7 +532,6 @@ sharkiq
 shelly
 shiftr
 shodan
-sht31
 sia
 sighthound
 signal_messenger
@@ -565,7 +546,6 @@ sleepiq
 slide
 sma
 smappee
-smarthab
 smart_meter_texas
 smartthings
 smarttub
@@ -574,7 +554,6 @@ smhi
 sms
 snapcast
 snmp
-sochain
 solaredge
 solaredge_local
 solarlog
@@ -638,8 +617,8 @@ tikteck
 tile
 tmb
 todoist
-tof
 tolo
+tomorrowio
 toon
 totalconnect
 touchline
@@ -686,6 +665,7 @@ vlc_telnet
 volkszaehler
 volumio
 volvooncall
+vulcan
 vultr
 w800rf32
 wallbox
@@ -724,5 +704,4 @@ zestimate
 zhong_hong
 ziggo_mediabox_xl
 zoneminder
-zwave
 zwave_me
