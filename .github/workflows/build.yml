@@ -25,7 +25,6 @@ permissions:
 env:
   PLATFORMS: linux/amd64,linux/arm64/v8,linux/arm/v7
   DOCKERHUB_TEST_TAG: ci-test
-  DOCKERHUB_PUBLISH_TAG: ${{ github.ref_name }}
 
 jobs:
   build:
@@ -44,6 +43,15 @@ jobs:
 
       - name: Fetch full annotated tags metadata
         run: git fetch --force --tags
+
+      - name: Configure DockerHub Publish Image Tag
+        run: |
+          github_ref="${{github.ref}}"
+          if [[ "${github_ref:?}" == refs/tags/v* ]]; then
+            echo "DOCKERHUB_PUBLISH_TAG=${github_ref#refs/tags/v}" >> $GITHUB_ENV
+          else
+            echo "DOCKERHUB_PUBLISH_TAG=${{github.ref_name}}" >> $GITHUB_ENV
+          fi
 
       - name: Set up makesystem
         run: make makesystem_install
