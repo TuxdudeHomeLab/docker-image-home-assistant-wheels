@@ -250,8 +250,6 @@ hisense_aehw4a1
 hive
 hlk_sw16
 home_connect
-homekit
-homekit_controller
 homematic
 homematicip_cloud
 home_plus_control
@@ -569,7 +567,6 @@ soundtouch
 spc
 spider
 splunk
-spotify
 squeezebox
 srp_energy
 starline

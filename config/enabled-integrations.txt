@@ -24,6 +24,8 @@ google_maps
 google_pubsub
 google_translate
 google_travel_time
+homekit
+homekit_controller
 html5
 http
 image
@@ -58,6 +60,7 @@ serial
 seven_segments
 slack
 speedtestdotnet
+spotify
 sql
 ssdp
 stream
