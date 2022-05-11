@@ -37,7 +37,6 @@ apprise
 aqualogic
 aquostv
 arcam_fmj
-arlo
 arris_tg2492lg
 aruba
 aseko_pool_live
@@ -118,7 +117,6 @@ deutsche_bahn
 devolo_home_control
 devolo_home_network
 dexcom
-digitalloggers
 digital_ocean
 directv
 discogs
@@ -341,6 +339,7 @@ mastodon
 matrix
 maxcube
 mazda
+meater
 mediaroom
 melcloud
 melissa
@@ -473,6 +472,7 @@ pvpc_hourly_pricing
 qbittorrent
 qld_bushfire
 qnap
+qnap_qsw
 quantum_gateway
 qvr_pro
 qwikswitch
@@ -523,6 +523,7 @@ sense
 senseme
 sensibo
 sentry
+senz
 serial_pm
 sesame
 seventeentrack
@@ -542,6 +543,7 @@ skybell
 sky_hub
 sleepiq
 slide
+slimproto
 sma
 smappee
 smart_meter_texas
@@ -623,6 +625,7 @@ tplink
 tplink_lte
 tractive
 tradfri
+trafikverket_ferry
 trafikverket_train
 trafikverket_weatherstation
 transport_nsw
@@ -634,6 +637,7 @@ twinkly
 twitch
 twitter
 ubus
+ukraine_alarm
 unifi_direct
 unifiled
 unifiprotect
