@@ -57,6 +57,7 @@ axis
 azure_devops
 azure_event_hub
 azure_service_bus
+baf
 baidu
 balboa
 bbox
@@ -214,6 +215,7 @@ garages_amsterdam
 gc100
 gdacs
 geniushub
+geocaching
 geonetnz_quakes
 geonetnz_volcano
 geo_rss_events
@@ -264,6 +266,7 @@ hvv_departures
 hydrawise
 hyperion
 ialarm
+ialarm_xr
 iammeter
 iaqualink
 icloud
@@ -310,6 +313,7 @@ lacrosse
 lametric
 lastfm
 launch_library
+laundrify
 lcn
 lg_netcast
 lg_soundbar
@@ -505,7 +509,6 @@ roomba
 roon
 route53
 rova
-rpi_gpio
 rpi_power
 rtsp_to_webrtc
 ruckus_unleashed
@@ -685,6 +688,7 @@ withings
 wiz
 wled
 wolflink
+ws66i
 xbox
 xbox_live
 xeoma
@@ -697,6 +701,7 @@ yandex_transport
 yeelight
 yeelightsunflower
 yi
+yolink
 youless
 zabbix
 zengge
