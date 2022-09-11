@@ -14,6 +14,7 @@ dhcp
 discovery
 dnsip
 ffmpeg
+file
 folder_watcher
 frontend
 generic
@@ -24,6 +25,7 @@ google_maps
 google_pubsub
 google_translate
 google_travel_time
+hardware
 homekit
 homekit_controller
 html5

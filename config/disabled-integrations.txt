@@ -69,8 +69,9 @@ blebox
 blink
 blinksticklight
 blockchain
+bluemaestro
 bluesound
-bluetooth_le_tracker
+bluetooth
 bluetooth_tracker
 bmw_connected_drive
 bond
@@ -79,6 +80,7 @@ broadlink
 brottsplatskartan
 brunt
 bsblan
+bthome
 bt_home_hub_5
 bt_smarthub
 buienradar
@@ -143,6 +145,7 @@ ecoal_boiler
 ecobee
 econet
 ecovacs
+ecowitt
 eddystone_temperature
 edimax
 edl21
@@ -169,6 +172,7 @@ ephember
 epson
 epsonworkforce
 eq3btsmart
+escea
 esphome
 etherscan
 eufy
@@ -210,6 +214,7 @@ fritzbox
 fritzbox_callmonitor
 fronius
 frontier_silicon
+fully_kiosk
 futurenow
 garages_amsterdam
 gc100
@@ -228,6 +233,7 @@ goalfeed
 goalzero
 gogogate2
 goodwe
+govee_ble
 gpsd
 gree
 greeneye_monitor
@@ -266,7 +272,6 @@ hvv_departures
 hydrawise
 hyperion
 ialarm
-ialarm_xr
 iammeter
 iaqualink
 icloud
@@ -277,6 +282,7 @@ ign_sismologia
 ihc
 incomfort
 influxdb
+inkbird
 insteon
 intellifire
 intesishome
@@ -293,6 +299,7 @@ izone
 jewish_calendar
 joaoapps_join
 juicenet
+justnimbus
 kaiterra
 kaleidescape
 keba
@@ -310,11 +317,14 @@ kraken
 kulersky
 kwb
 lacrosse
+lacrosse_view
 lametric
+landisgyr_heat_meter
 lastfm
 launch_library
 laundrify
 lcn
+led_ble
 lg_netcast
 lg_soundbar
 life360
@@ -347,6 +357,7 @@ meater
 mediaroom
 melcloud
 melissa
+melnor
 message_bird
 met_eireann
 meteoalarm
@@ -355,12 +366,11 @@ meteo_france
 metoffice
 mfi
 microsoft
-miflora
 mikrotik
 mill
 minecraft_server
 minio
-mitemp_bt
+moat
 mochad
 modbus
 modem_callerid
@@ -395,6 +405,7 @@ neurio_energy
 nexia
 nextbus
 nextcloud
+nextdns
 nfandroidtv
 nightscout
 niko_home_control
@@ -431,6 +442,7 @@ onvif
 opencv
 openerz
 openevse
+openexchangerates
 opengarage
 openhome
 open_meteo
@@ -466,6 +478,7 @@ progettihwsw
 proliphix
 prosegur
 proxmoxve
+prusalink
 ps4
 pulseaudio_loopback
 pure_energie
@@ -474,6 +487,7 @@ pushover
 pvoutput
 pvpc_hourly_pricing
 qbittorrent
+qingping
 qld_bushfire
 qnap
 qnap_qsw
@@ -525,6 +539,8 @@ sendgrid
 sense
 senseme
 sensibo
+sensorpro
+sensorpush
 sentry
 senz
 serial_pm
@@ -562,7 +578,6 @@ solaredge_local
 solarlog
 solax
 soma
-somfy
 somfy_mylink
 sonarr
 songpal
@@ -611,6 +626,8 @@ temper
 tensorflow
 tesla_wall_connector
 tfiac
+thermobeacon
+thermopro
 thermoworks_smoke
 thingspeak
 thinkingcleaner
@@ -693,9 +710,11 @@ xbox
 xbox_live
 xeoma
 xiaomi_aqara
+xiaomi_ble
 xiaomi_miio
 xiaomi_tv
 xs1
+yalexs_ble
 yale_smart_alarm
 yandex_transport
 yeelight
