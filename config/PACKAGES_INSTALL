@@ -1,5 +1,6 @@
 autoconf=2.71-3
 build-essential=12.9
+cmake=3.25.1-1
 libavcodec-dev=7:5.1.4-0+deb12u1
 libavdevice-dev=7:5.1.4-0+deb12u1
 libavfilter-dev=7:5.1.4-0+deb12u1
