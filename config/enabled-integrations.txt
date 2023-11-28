@@ -4,6 +4,7 @@ assist_pipeline
 auth.mfa_modules.notify
 auth.mfa_modules.totp
 backup
+bluetooth
 braviatv
 brother
 camera
@@ -11,6 +12,7 @@ cast
 cloud
 co2signal
 compensation
+conversation
 cups
 dhcp
 dnsip

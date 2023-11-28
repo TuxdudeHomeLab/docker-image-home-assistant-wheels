@@ -75,7 +75,6 @@ blinksticklight
 blockchain
 bluemaestro
 bluesound
-bluetooth
 bluetooth_tracker
 bmw_connected_drive
 bond
@@ -104,7 +103,6 @@ comelit
 comfoconnect
 concord232
 control4
-conversation
 coolmaster
 cppm_tracker
 cpuspeed
