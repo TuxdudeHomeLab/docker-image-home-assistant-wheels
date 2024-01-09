@@ -41,6 +41,8 @@ RUN \
         -disabled-integrations /config/disabled-integrations.txt \
         -output-requirements requirements.txt \
         -output-constraints constraints.txt \
+    && cp requirements.txt /wheels/build_requirements.txt \
+    && cp constraints.txt /wheels/build_constraints.txt \
     # Set up the virtual environment for building the wheels. \
     && python3 -m venv . \
     && source bin/activate \
@@ -62,7 +64,9 @@ SHELL ["/bin/bash", "-c"]
 RUN --mount=type=bind,target=/builder,from=builder,source=/wheels \
     set -e -o pipefail \
     && mkdir -p /wheels \
-    && cp -rf /builder/* /wheels/
+    && cp -rf /builder/* /wheels/ \
+    && mkdir -p /root/.wheels-build-info \
+    && mv /wheels/*.txt /root/.wheels-build-info
 
 ENV USER=${USER_NAME}
 ENV PATH="/opt/bin:${PATH}"
