@@ -35,6 +35,7 @@ google_tasks
 google_translate
 google_travel_time
 hardware
+holiday
 homekit
 homekit_controller
 html5
