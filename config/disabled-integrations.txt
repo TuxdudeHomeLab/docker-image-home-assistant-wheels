@@ -33,6 +33,7 @@ androidtv
 anel_pwrctrl
 anova
 anthemav
+aosmith
 apache_kafka
 apcupsd
 apple_tv
@@ -73,6 +74,7 @@ blebox
 blink
 blinksticklight
 blockchain
+blue_current
 bluemaestro
 bluesound
 bluetooth_tracker
@@ -89,6 +91,7 @@ bt_smarthub
 buienradar
 caldav
 canary
+ccm15
 channels
 circuit
 cisco_ios
@@ -117,6 +120,7 @@ decora_wifi
 delijn
 deluge
 denonavr
+devialet
 devolo_home_control
 devolo_home_network
 dexcom
@@ -136,6 +140,7 @@ doorbird
 dormakaba_dkey
 dovado
 dremel_3d_printer
+drop_connect
 dsmr
 dunehd
 duotecno
@@ -179,7 +184,6 @@ envisalink
 ephember
 epson
 epsonworkforce
-eq3btsmart
 escea
 esphome
 etherscan
@@ -203,6 +207,7 @@ fivem
 fixer
 fjaraskupan
 fleetgo
+flexit_bacnet
 flic
 flick_electric
 flipr
@@ -344,6 +349,7 @@ life360
 lifx
 lightwave
 limitlessled
+linear_garage_door
 linode
 linux_battery
 lirc
@@ -394,12 +400,12 @@ monoprice
 mopeka
 motion_blinds
 motioneye
+motionmount
 mpd
 msteams
 mullvad
 mutesync
 mvglive
-myq
 mysensors
 mystrom
 mythicbeastsdns
@@ -472,8 +478,10 @@ opple
 oralb
 oru
 orvibo
+osoenergy
 osramlightify
 otbr
+ourgroceries
 overkiz
 ovo_energy
 owntracks
@@ -484,6 +492,7 @@ pandora
 peco
 pegel_online
 pencom
+permobil
 philips_js
 picnic
 pilight
@@ -529,6 +538,7 @@ rdw
 recollect_waste
 recswitch
 reddit
+refoss
 rejseplanen
 remember_the_milk
 remote_rpi_gpio
@@ -632,6 +642,7 @@ stookwijzer
 streamlabswater
 subaru
 suez_water
+sunweg
 supla
 surepetcare
 swiss_hydrological_data
@@ -648,6 +659,7 @@ synology_srm
 system_bridge
 tado
 tailscale
+tailwind
 tami4
 tankerkoenig
 tank_utility
@@ -660,6 +672,7 @@ tellstick
 temper
 tensorflow
 tesla_wall_connector
+tessie
 tfiac
 thermobeacon
 thermopro
@@ -705,6 +718,7 @@ upcloud
 uptimerobot
 utility_meter
 uvc
+v2c
 vallox
 vasttrafik
 velbus
