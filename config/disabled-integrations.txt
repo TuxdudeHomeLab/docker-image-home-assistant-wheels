@@ -15,6 +15,7 @@ airq
 airthings
 airthings_ble
 airtouch4
+airtouch5
 airvisual
 airvisual_pro
 airzone
@@ -28,6 +29,7 @@ ambiclimate
 ambient_station
 amcrest
 ampio
+analytics_insights
 android_ip_webcam
 androidtv
 anel_pwrctrl
@@ -65,6 +67,7 @@ azure_service_bus
 baf
 baidu
 balboa
+bang_olufsen
 bbox
 beewi_smartclim
 bitcoin
@@ -81,6 +84,7 @@ bluetooth_tracker
 bmw_connected_drive
 bond
 bosch_shc
+bring
 broadlink
 brottsplatskartan
 brunt
@@ -96,7 +100,6 @@ channels
 circuit
 cisco_ios
 cisco_mobility_express
-cisco_webex_teams
 clementine
 cloudflare
 cmus
@@ -169,6 +172,7 @@ eliqonline
 elkm1
 elmax
 elv
+elvia
 emby
 emonitor
 emulated_hue
@@ -182,6 +186,7 @@ entur_public_transport
 environment_canada
 envisalink
 ephember
+epion
 epson
 epsonworkforce
 escea
@@ -247,6 +252,7 @@ goalzero
 gogogate2
 goodwe
 govee_ble
+govee_light_local
 gpsd
 gree
 greeneye_monitor
@@ -266,11 +272,11 @@ hikvision
 hikvisioncam
 hisense_aehw4a1
 hive
+hko
 hlk_sw16
 home_connect
 homematic
 homematicip_cloud
-home_plus_control
 homewizard
 homeworks
 honeywell
@@ -280,6 +286,7 @@ huawei_lte
 hue
 huisbaasje
 hunterdouglas_powerview
+huum
 hvv_departures
 hydrawise
 hyperion
@@ -335,6 +342,7 @@ kulersky
 kwb
 lacrosse
 lacrosse_view
+lamarzocco
 lametric
 landisgyr_heat_meter
 lastfm
@@ -342,10 +350,10 @@ launch_library
 laundrify
 lcn
 ld2410_ble
+leaone
 led_ble
 lg_netcast
 lg_soundbar
-life360
 lifx
 lightwave
 limitlessled
@@ -383,7 +391,6 @@ met_eireann
 meteoalarm
 meteoclimatic
 meteo_france
-metoffice
 mfi
 microsoft
 mikrotik
@@ -409,6 +416,7 @@ mvglive
 mysensors
 mystrom
 mythicbeastsdns
+myuplink
 nad
 nam
 namecheapdns
@@ -526,11 +534,13 @@ qnap_qsw
 quantum_gateway
 qvr_pro
 qwikswitch
+rabbitair
 rachio
 radiotherm
 rainbird
 raincloud
 rainforest_eagle
+rainforest_raven
 rainmachine
 rapt_ble
 raspyrfm
@@ -555,6 +565,7 @@ risco
 rituals_perfume_genie
 rmvtransport
 rocketchat
+romy
 roomba
 roon
 route53
@@ -665,13 +676,16 @@ tankerkoenig
 tank_utility
 tapsaff
 tasmota
+technove
 ted5000
+tedee
 telegram_bot
 tellduslive
 tellstick
 temper
 tensorflow
 tesla_wall_connector
+teslemetry
 tessie
 tfiac
 thermobeacon
@@ -693,6 +707,7 @@ touchline
 tplink
 tplink_lte
 tplink_omada
+traccar_server
 tractive
 tradfri
 trafikverket_camera
